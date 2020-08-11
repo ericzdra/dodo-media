@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: white;
-  height: 1500px; }
+  height: 1000px; }
 
 a {
   text-decoration: none;
@@ -101,8 +101,8 @@ a {
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 10px;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background-color: #06D6A0;
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .article:hover {
@@ -111,7 +111,7 @@ a {
   .article__tittle {
     color: white;
     font-family: 'Comfortaa', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center; }
   .article__text {
     font-size: 1.5rem;
@@ -129,9 +129,47 @@ a {
     font-size: 16px;
     justify-self: flex-end; }
 
+.teamMembers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center; }
+
+.teamBubbleWrap {
+  position: relative;
+  text-align: center; }
+  .teamBubbleWrap:hover > .memberName {
+    visibility: visible;
+    opacity: 1; }
+  .teamBubbleWrap:hover > .teamBubble {
+    filter: brightness(50%); }
+
+.memberName {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 3px 5px 2px #474747;
+  font-size: 3.5rem;
+  font-weight: 500;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s; }
+
+.teamBubble {
+  border-radius: 50%;
+  transition: filter 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
 tr th {
   color: #EB4511;
-  font-family: 'Comfortaa', cursive; }
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400;
+  font-size: large; }
+
+tr td {
+  font-weight: 400;
+  font-size: medium; }
 
 .footer {
   position: relative;
@@ -142,3 +180,7 @@ tr th {
 
 .text-black {
   font-size: 2rem; }
+
+.center {
+  margin-left: auto;
+  margin-right: auto; }
