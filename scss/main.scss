@@ -30,7 +30,7 @@ a{
     z-index: 2;
     display: grid;
     top: 1px;
-    height: 120px;
+    height: auto;
     background-color: $mainColor;
     border-radius: 2px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -49,14 +49,31 @@ a{
         @include easeIn(0.5s)
 }
 }
+.hamMenu{
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    height: 50px;
+    width: 50px;
+    grid-area: nav;
+    display: none;
+    align-self: center;
+    justify-self: end;
+    margin-right: 70px;
+    visibility: hidden;
+
+}
 .nav {
+    align-self: center;
+
+&__ul {
     grid-area: nav;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-
-&__ul {
     list-style: none;
     font-size: 0; /*Para que toda la lista tenga el mismo tamaño y no cuente la viñeta */
 }
@@ -75,8 +92,21 @@ a{
     }
 }
 
-
-
+@media only screen and (max-width: 900px)
+{
+    .nav {
+        display: none;
+    }
+    .hamMenu{
+        display: block;
+        visibility: visible;
+    }
+    .nav__ul{
+        flex-direction: column;
+        align-items: flex-end;
+        float: left;
+    }
+}
 
 
 .carrousel  {

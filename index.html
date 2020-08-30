@@ -14,13 +14,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
     <header class="header">
         <h1 class="header__tittle"><a href="index.html">DODO</a></h1>
-        <nav class="nav">
+        <button class="hamMenu" onclick="toggleMenu()"><i class="fa fa-bars"></i></button>
+        <nav id="nav" class="nav">
             <ul class="nav__ul">
                 <li class="nav__li"><a href="index.html" class="nav__a"><strong>Home</strong></a></li>
                 <li class="nav__li"><a href="nosotros.html" class="nav__a">Nosotros</a></li>
@@ -68,6 +70,8 @@
     <div class="footer">
         <p class="footerRights">Derechos Reservados 2020 Dodo Media</p>
     </div>
+    <script type="text/javascript" src="scripts/scripts.js"> 	
+    </script>
 </body>
 
 </html>
