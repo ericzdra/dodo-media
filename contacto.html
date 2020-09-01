@@ -31,42 +31,23 @@
         </nav>
     </header>
     <hr>
-    <div class="container">
-        <div class="row justify-content-center">
-            <form class="col-12">
-                <div class="form-group">
-                    <label class="text-black" for="name">Nombre</label>
-                    <input type="text" class="form-control" id="name" placeholder="Ej: Juan Perez">
-                    <div class="form-group">
-                        <label class="text-black" for="mail">Mail</label>
-                        <input type="email" class="form-control" id="mail" placeholder="Ej: juan@ejemplo.com">
-                        <div class="form-group">
-                            <label class="text-black" for="phone">Teléfono</label>
-                            <input type="number" class="form-control" id="phone" placeholder="Ej: 1155555555">
-                            <small class="text-black" id="phoneTooltip" class="form-text text-muted">Si sos de otro
-                                país, no te olvides del código de área.</small>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="text-black" for="comments">Tu mensaje</label>
-                        <input type="text" class="form-control" id="comments" placeholder="Comentarios">
-                    </div>
-                </div>
-                <div class="form-check-inline">
-                    <input type="checkbox" class="form-check-input" id="promos">
-                    <label class="text-black" class="form-check-label" for="promos">Deseo recibir correos
-                        promocionales</label>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-light">Enviar</button>
-
-            </form>
+    <h2 class="secondMainTittle">Contactate con nosotros</h2>
+    <form class="cf">
+        <div class="half left cf">
+            <input type="text" id="input-name" placeholder="Nombre">
+            <input type="email" id="input-email" placeholder="Dirección de Correo">
+            <input type="text" id="input-subject" placeholder="Asunto">
         </div>
-        <hr>
-        <footer>
-            <p class="footerRights">Derechos Reservados 2020 Dodo Media</p>
+        <div class="half right cf">
+            <textarea name="message" type="text" id="input-message" placeholder="Mensaje"></textarea>
+        </div>
+        <input type="submit" value="Enviar" id="input-submit">
+    </form>
+    <hr>
+    <div class="footer">
+        <p class="footerRights">Derechos Reservados 2020 Dodo Media</p>
         </footer>
-        <script type="text/javascript" src="scripts/scripts.js"> 	
+        <script type="text/javascript" src="scripts/scripts.js">
         </script>
 </body>
 

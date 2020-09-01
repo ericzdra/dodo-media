@@ -8,7 +8,7 @@ function toggleMenu() {
 }
 
 function toggleSize(y) {
-    if (y.matches && document.getElementById("nav").style.display === "none") { // If media query matches
+    if (y.matches && document.getElementById("nav").style.display === "none") { 
         document.getElementById("nav").style.display = "block";
     } else {
         document.body.style.backgroundColor = "none";
@@ -16,5 +16,5 @@ function toggleSize(y) {
 }
 
 var y = window.matchMedia("(min-width: 900px)")
-toggleSize(y) // Call listener function at run time
-y.addListener(toggleSize) // Attach listener function on state changes
+toggleSize(y)
+y.addListener(toggleSize) 
